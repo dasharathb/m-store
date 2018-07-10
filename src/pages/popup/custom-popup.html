@@ -1,0 +1,31 @@
+<ion-content padding>
+  <div id="homeCard" class="" >
+    <ion-list>
+      <ion-item>
+        <button ion-button round outline (click)='dismiss()'>X</button>
+        <p>
+          Add a photo of your Order.
+        </p>
+        <p>
+          (JPG  / JPEG / PNG only)
+        </p>
+      </ion-item>
+      <ion-item>
+        <div>
+        <button ion-button outline (click)='takePhoto()'>
+          <span><ion-icon ios='ios-camera' md='md-camera'></ion-icon></span>
+          <span style='padding-left:10px'>Take Photo</span>
+        </button>
+      </div>
+      <div>
+        <button ion-button outline (click)='choosePhoto()'>
+          <span><ion-icon ios='ios-photos' md='md-photos'></ion-icon></span>
+          <span style='padding-left:10px'>
+            Choose from Gallery
+          </span>
+        </button>
+      </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
