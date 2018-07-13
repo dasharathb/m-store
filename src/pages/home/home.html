@@ -1,0 +1,57 @@
+<ion-header style="border:1px solid red;">
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Purchase Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding  style="border:1px solid red;">
+  <ion-list>
+    <ion-item>
+    </ion-item>
+    <ion-item>
+        <button ion-button color="secondary" round (click)="openModal()">upload Order</button>
+        <img [src]="base64Image" *ngIf="base64Image" width="150" height="150"/>
+    </ion-item>
+  </ion-list>
+  <!-- <ion-grid radio-group [(ngModel)]="orderType">
+    <ion-row>
+     <ion-col text-center>
+          <div text-center>Are you ordering for yourself ?.</div>
+     </ion-col>
+    </ion-row>
+    <ion-row>
+     <ion-col>
+
+            <ion-label>Yes</ion-label>
+            <ion-radio value="Y"></ion-radio>
+
+     </ion-col>
+     <ion-col >
+
+            <ion-label>No</ion-label>
+            <ion-radio value="N"></ion-radio>
+
+     </ion-col>
+    </ion-row>
+</ion-grid> -->
+<div text-center style="border:1px solid red;">please select store you like</div>
+<ion-grid style="border:1px solid red;">
+  <ion-row *ngFor="let store of stores">
+   <ion-col>
+     <label class = "checkbox">
+       <input type = "checkbox">
+     </label>
+   </ion-col>
+   <ion-col>
+     <label> Sri Lakshmi Kirana Stroe </label>
+     <label> Langer House </label>
+   </ion-col>
+  </ion-row>
+</ion-grid>
+<button ion-button round (click)="placeOrder()">Continue</button>
+</ion-content>

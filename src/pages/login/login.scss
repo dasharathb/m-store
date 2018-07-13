@@ -1,3 +1,11 @@
 page-login {
-
+  .imageBg{
+    //background-image: url('/assets/images/rtr3er24.jpg');
+    background: url('/assets/images/rtr3er24.jpg') no-repeat 0;
+    background-repeat: no-repeat;
+    background-blend-mode: 0.3;
+  }
+  .test{
+    border: 1px solid;
+  }
 }
