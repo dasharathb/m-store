@@ -1,7 +1,22 @@
 page-home {
 
-#ion-title {
-  position: absolute;
-  padding-left: 30px
-}
+    #ion-title {
+      position: absolute;
+      padding-left: 30px
+    }
+
+    .iRadio{
+      // position: absolute;
+      // right:20px;
+      // top:50%;
+      margin-top:10px;
+      margin-right:20px;
+    }
+
+    .selectGrid{
+      margin-top:20px;
+      margin-bottom:20px;
+      border:1px solid #dedede;
+    }
+
 }

@@ -1,21 +1,22 @@
-<ion-header style="border:1px solid red;">
+<ion-header>
   <ion-navbar>
     <ion-buttons start>
       <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     </ion-buttons>
-    <ion-title>Purchase Order</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding  style="border:1px solid red;">
+<ion-content padding>
   <ion-list>
-    <ion-item>
+    <ion-item text-center>
+      <button ion-button color="secondary" round (click)="openModal()">upload Order</button>
     </ion-item>
     <ion-item>
-        <button ion-button color="secondary" round (click)="openModal()">upload Order</button>
         <img [src]="base64Image" *ngIf="base64Image" width="150" height="150"/>
+        <img src="/assets/images/there-they-are.jpg" width="150" height="150" imageViewer="/assets/images/there-they-are.jpg"/>
     </ion-item>
   </ion-list>
   <!-- <ion-grid radio-group [(ngModel)]="orderType">
@@ -39,17 +40,17 @@
      </ion-col>
     </ion-row>
 </ion-grid> -->
-<div text-center style="border:1px solid red;">please select store you like</div>
-<ion-grid style="border:1px solid red;">
-  <ion-row *ngFor="let store of stores">
-   <ion-col>
-     <label class = "checkbox">
+<div text-center>please select store you like</div>
+<ion-grid class="selectGrid">
+  <ion-row *ngFor="let store of stores" radio-group [(ngModel)]="orderType">
+   <ion-col col-2 text-right>
+     <!-- <label class = "checkbox">
        <input type = "checkbox">
-     </label>
+     </label> -->
+     <ion-radio class="iRadio" value="{{store.name}}"></ion-radio>
    </ion-col>
-   <ion-col>
-     <label> Sri Lakshmi Kirana Stroe </label>
-     <label> Langer House </label>
+   <ion-col col-10 text-left>
+     <div> Sri Lakshmi Kirana Stroe <br > Langer House </div>
    </ion-col>
   </ion-row>
 </ion-grid>
